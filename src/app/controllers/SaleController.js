@@ -47,7 +47,7 @@ module.exports = {
 				ou igual a 20% do total de vendas, significa que é uma venda permitida.
 				OBS:Adicionei uma condição extra de total de vendas > 5, pois no inicio o sistema tem 0 vendas,
 				se nao setasse isso, essa função nunca iria funcionar */
-		if (attendantSales + 1 > totalSales * 0.2 && attendantSales > 5)
+		if (attendantSales + 1 > totalSales * 0.2)
 			return res.json({
 				error: true,
 				message: 'Error. The seller has reached the limit of 20% of sales.',
