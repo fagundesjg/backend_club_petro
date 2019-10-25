@@ -22,16 +22,16 @@ Foi proposta o tratamento de vendas fraudulentas através de uma API que utiliza
 
 ---
 
-#### 1. Banco de dados
+### 1. Banco de dados
 
 Foi escolhido utilizar um banco NoSQL, sendo ele o banco de dados **MongoDB**. O motivo da escolha está associado ao fato dessa ser uma aplicação de pequeno porte, sua simplicidade de implementação, configuração e de ser bem indicado para aplicações que não possuem muitas relações entre as entidades, como é o caso do problema proposto.
 Para aplicações de maior porte com muitos relacionamentos é mais indicado um banco SQL como o MySQL ou Postgres.
 
 ---
 
-#### 2. Models
+### 2. Models
 
-##### 2.1 Client
+#### 2.1 Client
 
 Model referente aos clientes do sistema. Possui os seguintes campos:
 
@@ -44,7 +44,7 @@ Model referente aos clientes do sistema. Possui os seguintes campos:
 
 Vale ressaltar que todo objeto do mongo possui um campo único de nome **\_id**, porém como esse é um código gerado internamento pelo próprio mongo que não tem como alterar e esse codigo único de cliente pode ter padrões utilizados pela própria empresa, foi criado esse campo.
 
-##### 2.2 Attendant
+#### 2.2 Attendant
 
 Model referente aos frentistas do sistema. Possui os seguintes campos:
 
@@ -55,7 +55,7 @@ Model referente aos frentistas do sistema. Possui os seguintes campos:
 | createdAt     | Timestamp do momento da criação do registro. É feito internamente pelo mongo.       |
 | updatedAt     | Timestamp do momento da última edição do registro. É feito internamente pelo mongo. |
 
-##### 2.3 Sale
+#### 2.3 Sale
 
 Model referente às vendas do sistema.
 
@@ -70,7 +70,7 @@ Model referente às vendas do sistema.
 
 ---
 
-#### 3. Controllers
+### 3. Controllers
 
 Os controllers criados foram **AttendantController**, **ClientController** e **SaleController**. Todos eles possuem as mesmas duas funções implementadas, sendo elas: _store e index_.
 
@@ -81,7 +81,7 @@ Os controllers criados foram **AttendantController**, **ClientController** e **S
 
 ---
 
-#### 4. API
+### 4. API
 
 Foi implementado os seguintes métodos na api.
 
@@ -102,7 +102,7 @@ Vale ressaltar que erros foram tratados e a api retorna sempre um campo chamado 
 
 ---
 
-#### 5. Observações
+### 5. Observações
 
 Para realizar os testes, o banco de dados foi hospedado no meu cluster pessoal do **MongoDB Atlas** que já está populado com dados até o dia 31/10/2019. Após essa data os testes deveram ser realizados localmente.
 
@@ -120,7 +120,7 @@ Com essa condição, é necessário ter mais de 5 vendas para começar analisar 
 
 ---
 
-#### 6. Como executar
+### 6. Como executar
 
 Para executar basta rodar o comando:
 
