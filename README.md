@@ -118,13 +118,17 @@ if (attendantSales + 1 > totalSales * 0.2 && totalSales > 5)
 
 Com essa condição, é necessário ter mais de 5 vendas para começar analisar os 20% do total de vendas.
 
-##### 6. Como executar
+---
+
+#### 6. Como executar
 
 Para executar basta rodar o comando:
 
 ```
 yarn dev
 ```
+
+---
 
 ### Dúvidas? Sugestões? Críticas?
 
